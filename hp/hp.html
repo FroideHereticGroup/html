@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="HP" />
+    <meta name="keywords" content="読書,クラシックギター,筋トレ,ゲーム" />
+    <title>ホームページ</title>
+    <link rel="stylesheet" href="hp.css" media="all" />
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="footerFixed.js"></script>
+    <script type="text/javascript">
+      function slideSwitch() {
+       var $active = $('#slideshow img.active');
+
+       if ( $active.length == 0 )
+         $active = $('#slideshow img:last');
+
+       var $next =  $active.next().length ? $active.next() : $('#slideshow img:first');
+
+       $active.addClass('last-active');
+
+       $next.css({opacity: 0.0})
+        .addClass('active')
+       .animate({opacity: 1.0}, 1000, function() {
+           $active.removeClass('active last-active');
+        });
+      }
+
+      $(function() {
+         setInterval( "slideSwitch()", 4000 );
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+
+    </header>
+  <div id="container">
+    <p id="slideshow">
+      <img src="top.jpg" width="1000px" height="550px" alt="photo1"  class="active"/>
+      <img src="kintore1.jpg" width="1000px" height="550px" alt="photo2"  />
+      <img src="ff5.jpg" width="1000px" height="550px" alt="photo3"  />
+      <img src="math2.jpg" width="1000px" height="550px" alt="photo7"  />
+      <img src="kintore2.jpeg" width="1000px" height="550px" alt="photo4"  />
+      <img src="nobita.jpg" width="1000px" height="550px" alt="photo5"  />
+      <img src="math.jpg" width="1000px" height="550px" alt="photo6"  />
+    </p>
+
+    <ul id="menu">
+      <li><a href="hp.html">ホーム</a></li>
+      <li><a href="guitar.html">クラシックギター</a></li>
+      <li><a href="mascle.html">筋トレ</a></li>
+      <li><a href="game.html">ゲーム</a></li>
+      <li><a href="book.html">読書</a></li>
+      <li><a href="paper.html">卒論</a></li>
+    </ul><br>
+
+    <div id="content">
+    <h2>このホームページについて</h2>
+      <img src="./memo_tape_brown_500/image.png" alt="" class="relative"/>
+      <p id="text1">
+      ここでは、私についてより詳しく知ってもらえるようにホームページを作成しました。<br>
+      ほとんどが趣味に関することですが、ゆっくりと見ていってください。<br>
+    </p>
+
+    <h3><a href="guitar.html">クラシックギター</a><img src="guitar1.jpg" /></h3>
+    <p id="text2">
+      私が大学生時代の部活から始めたクラシックギター。<br>
+      クラシックギターってなんなのよって思ったあなた！<br>
+      まずは他のギターとの違いから見ていきましょう。
+    </p>
+
+    <h3><a href="mascle.html">筋トレ</a><img src="kintore.png" /></h3>
+    <p id="text2">
+      ダイエットから始まる肉体美。<br>
+      私が筋トレを始めるきっかけになった出来事から今に至るまでを綴っていきます。<br>
+      果たして、今はどのように筋トレをやっているのでしょうか。
+    </p>
+
+    <h3><a href="game.html">ゲーム</a><img src="mario.jpg"></h3>
+    <p id="text2">
+      私の超絶おすすめゲーム！<br>
+      主に昔のゲームに関するレビューのようなものです。<br>
+      完全に自己満足です。思いっきり思い出補正も入っています。
+    </p>
+
+    <h3><a href="book.html">読書</a><img src="book1.jpg" /></h3>
+    <p id="text2">
+      心が現れるような素晴らしい本たち。<br>
+      たくさん読んだ本の中で、普段読書をしない人でも楽しく読めるものを紹介。<br>
+      もちろんオススメも列挙していきます。
+    </p>
+
+    <h3><a href="paper.html">卒論</a><img src="hugo.jpg" /></h3>
+    <p id="text2">
+      私の卒論「符号理論」について<br>
+      符号理論と聞くと、まずプラスやマイナスといった符号を思い浮かべるでしょう。<br>
+      その理論ってなんなの？<br>
+      そんな疑問にお答えするのが、符号理論を勉強してきた私です。詳細は卒論ページにて。
+    </p>
+    </div>
+  </div>
+  </body>
+</html>

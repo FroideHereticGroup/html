@@ -1,0 +1,21 @@
+<table cellpadding="0" cellspacing="0" border="0">
+ <tbody>
+
+  <tr>
+   <td background="1.png" width="500" height="80"></td>
+  </tr>
+
+  <tr>
+   <td background="2.png" width="500">
+    <p style="margin:0 50px;">
+     ここにテキストを入力
+    </p>
+   </td>
+  </tr>
+
+  <tr>
+   <td background="3.png" width="500" height="50"></td>
+  </tr>
+
+ </tbody>
+</table>
